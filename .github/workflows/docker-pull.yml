@@ -54,7 +54,7 @@ jobs:
         id: pull_tag_push
         run: |
           docker pull --platform ${{ github.event.inputs.ARCH }} ${{ github.event.inputs.IMAGE_NAME }}
-          docker tag ${{ github.event.inputs.IMAGE_NAME }} ${{ github.event.inputs.TARGET_REGISTRY }}/${{ github.event.inputs.TARGET_REPOSITORY }}/${{ github.event.inputs.NEW_NAME }}
+          docker tag ${{ github.event.inputs.IMAGE_NAME }} crpi-3ohhxlfudpsqo7rp.cn-hangzhou.personal.cr.aliyuncs.com/zhiyuzhang/ddl:${{ github.event.inputs.NEW_NAME }}
           docker push crpi-3ohhxlfudpsqo7rp.cn-hangzhou.personal.cr.aliyuncs.com/zhiyuzhang/ddl:${{ github.event.inputs.NEW_NAME }}
         continue-on-error: true
 
