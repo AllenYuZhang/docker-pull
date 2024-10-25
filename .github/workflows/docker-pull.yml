@@ -39,7 +39,7 @@ jobs:
     steps:
       - name: 登录到 Docker 仓库
         id: login
-        run: docker login --username=zhang109413185 crpi-3ohhxlfudpsqo7rp.cn-hangzhou.personal.cr.aliyuncs.com
+        run: sudo docker login --username=zhang109413185 crpi-3ohhxlfudpsqo7rp.cn-hangzhou.personal.cr.aliyuncs.com
         continue-on-error: true
 
       - name: 检查 Docker 登录成功
